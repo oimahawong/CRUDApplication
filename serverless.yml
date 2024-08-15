@@ -1,0 +1,36 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: bbqchip
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: skip
+service: skip
+
+provider:
+  name: aws
+  runtime: python3.8
+  stage: ${opt:stage, 'dev'}
+  region: us-west-2
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: 'arn:aws:s3:::fav-food-storage/*'
+  httpApi:
+    cors: true
+
+plugins:
+  - serverless-wsgi
+  - serverless-finch
+
+functions:
+  api:
+    handler: wsgi_handler.handler
+    events:
+      - httpApi: "*"
+    
+
+custom:
+  wsgi:
+    app: app.app
+  client:
+    bucketName: sushirollscali123-client-${self:provider.stage}
+

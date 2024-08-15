@@ -1,0 +1,51 @@
+<html>
+<body>
+    <header>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    </header>
+
+    <h1>Go Serverless.. BBQ Chips Sushi</h1>
+
+<script>
+my_endpoint = 'https://bd10exxgyf.execute-api.us-west-2.amazonaws.com'
+
+function create(){
+    $.getJSON( my_endpoint + "/create_fav_foods?fav_foods=" + $('#myfavfood').val()
+      , function(data){
+        alert(JSON.stringify(data));
+      });
+
+  }
+
+  function read(){
+    $.getJSON(my_endpoint + "/read_fav_foods"
+      , function( data ) {
+        $('#myfavfood').val(data['fav_foods']);
+      });
+  }
+
+  function update(){
+    $.getJSON ( my_endpoint + "/update_fav_foods?fav_foods=" + $('#myfavfood').val() 
+                ,function( data ){
+                  $('#myfavfood').val(data['fav_foods']);
+                });
+  }
+
+  function delete_food(){
+      $.getJSON( my_endpoint + "/del_fav_foods"
+        , function( data ){
+          alert(JSON.stringify(data));
+        });
+    }
+
+
+</script>
+</body>
+<input type="text" id="myfavfood"></input>
+    <br>
+    <button onclick = "create();">Create</button>
+    <button onclick = "read();">Read</button>
+    <button oncclick = "update();">Update</button>
+    <button onclick= "delete_food();">Delete</button>
+
+</html>

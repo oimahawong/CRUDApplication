@@ -1,0 +1,323 @@
+{
+  "/Users/oi/Desktop/my_first_flask": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.21",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "opt": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "org": "bbqchip",
+            "app": "skip",
+            "service": "skip",
+            "provider": {
+              "name": "aws",
+              "runtime": "python3.8",
+              "stage": "dev",
+              "region": "us-west-2",
+              "iamRoleStatements": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:*"
+                  ],
+                  "Resource": "arn:aws:s3:::fav-food-storage/*"
+                }
+              ],
+              "httpApi": {
+                "cors": true
+              },
+              "versionFunctions": true
+            },
+            "plugins": [
+              "serverless-wsgi",
+              "serverless-finch"
+            ],
+            "functions": {
+              "api": {
+                "handler": "wsgi_handler.handler",
+                "events": [
+                  {
+                    "httpApi": "*"
+                  }
+                ],
+                "name": "skip-dev-api"
+              }
+            },
+            "custom": {
+              "wsgi": {
+                "app": "app.app"
+              },
+              "client": {
+                "bucketName": "sushirollscali123-client-dev"
+              }
+            }
+          },
+          "configFileDirPath": "/Users/oi/Desktop/my_first_flask",
+          "config": {
+            "type": "opt"
+          },
+          "options": {}
+        },
+        "resolvers": {}
+      },
+      "aws": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "org": "bbqchip",
+            "app": "skip",
+            "service": "skip",
+            "provider": {
+              "name": "aws",
+              "runtime": "python3.8",
+              "stage": "dev",
+              "region": "us-west-2",
+              "iamRoleStatements": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:*"
+                  ],
+                  "Resource": "arn:aws:s3:::fav-food-storage/*"
+                }
+              ],
+              "httpApi": {
+                "cors": true
+              },
+              "versionFunctions": true
+            },
+            "plugins": [
+              "serverless-wsgi",
+              "serverless-finch"
+            ],
+            "functions": {
+              "api": {
+                "handler": "wsgi_handler.handler",
+                "events": [
+                  {
+                    "httpApi": "*"
+                  }
+                ],
+                "name": "skip-dev-api"
+              }
+            },
+            "custom": {
+              "wsgi": {
+                "app": "app.app"
+              },
+              "client": {
+                "bucketName": "sushirollscali123-client-dev"
+              }
+            }
+          },
+          "configFileDirPath": "/Users/oi/Desktop/my_first_flask",
+          "config": {
+            "type": "aws"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": {
+            "aws": {
+              "accessKeyId": "<REDACTED>",
+              "secretAccessKey": "<REDACTED>",
+              "sessionToken": "<REDACTED>"
+            },
+            "params": null,
+            "accessKey": "<REDACTED>"
+          },
+          "isDefaultConfig": true
+        },
+        "resolvers": {}
+      },
+      "self": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "org": "bbqchip",
+            "app": "skip",
+            "service": "skip",
+            "provider": {
+              "name": "aws",
+              "runtime": "python3.8",
+              "stage": "dev",
+              "region": "us-west-2",
+              "iamRoleStatements": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:*"
+                  ],
+                  "Resource": "arn:aws:s3:::fav-food-storage/*"
+                }
+              ],
+              "httpApi": {
+                "cors": true
+              },
+              "versionFunctions": true
+            },
+            "plugins": [
+              "serverless-wsgi",
+              "serverless-finch"
+            ],
+            "functions": {
+              "api": {
+                "handler": "wsgi_handler.handler",
+                "events": [
+                  {
+                    "httpApi": "*"
+                  }
+                ],
+                "name": "skip-dev-api"
+              }
+            },
+            "custom": {
+              "wsgi": {
+                "app": "app.app"
+              },
+              "client": {
+                "bucketName": "sushirollscali123-client-dev"
+              }
+            }
+          },
+          "configFileDirPath": "/Users/oi/Desktop/my_first_flask",
+          "config": {
+            "type": "self"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": {
+            "aws": {
+              "accessKeyId": "<REDACTED>",
+              "secretAccessKey": "<REDACTED>",
+              "sessionToken": "<REDACTED>"
+            },
+            "params": null,
+            "accessKey": "<REDACTED>"
+          }
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/oi/Desktop/my_first_flask",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "org": "bbqchip",
+      "app": "skip",
+      "service": "skip",
+      "provider": {
+        "name": "aws",
+        "runtime": "python3.8",
+        "stage": "dev",
+        "region": "us-west-2",
+        "iamRoleStatements": [
+          {
+            "Effect": "Allow",
+            "Action": [
+              "s3:*"
+            ],
+            "Resource": "arn:aws:s3:::fav-food-storage/*"
+          }
+        ],
+        "httpApi": {
+          "cors": true
+        },
+        "versionFunctions": true
+      },
+      "plugins": [
+        "serverless-wsgi",
+        "serverless-finch"
+      ],
+      "functions": {
+        "api": {
+          "handler": "wsgi_handler.handler",
+          "events": [
+            {
+              "httpApi": "*"
+            }
+          ],
+          "name": "skip-dev-api"
+        }
+      },
+      "custom": {
+        "wsgi": {
+          "app": "app.app"
+        },
+        "client": {
+          "bucketName": "sushirollscali123-client-dev"
+        }
+      }
+    },
+    "serviceRawFile": "# \"org\" ensures this Service is used with the correct Serverless Framework Access Key.\norg: bbqchip\n# \"app\" enables Serverless Framework Dashboard features and sharing them with other Services.\napp: skip\nservice: skip\n\nprovider:\n  name: aws\n  runtime: python3.8\n  stage: ${opt:stage, 'dev'}\n  region: us-west-2\n  iamRoleStatements:\n    - Effect: Allow\n      Action:\n        - s3:*\n      Resource: 'arn:aws:s3:::fav-food-storage/*'\n  httpApi:\n    cors: true\n\nplugins:\n  - serverless-wsgi\n  - serverless-finch\n\nfunctions:\n  api:\n    handler: wsgi_handler.handler\n    events:\n      - httpApi: \"*\"\n    \n\ncustom:\n  wsgi:\n    app: app.app\n  client:\n    bucketName: sushirollscali123-client-${self:provider.stage}\n\n",
+    "command": [
+      "client",
+      "remove"
+    ],
+    "options": {},
+    "error": null,
+    "params": {},
+    "machineId": "45d944745c46755e488b2adced841864",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "9ac1c5c2-e1f7-45b6-8241-5bd4acab7e12",
+    "orgName": "bbqchip",
+    "userId": "Dty5HscckJvMzsvPRc",
+    "dashboard": {
+      "isEnabledForService": true,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": {
+        "providers": true,
+        "monitoring": false
+      },
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": "MXQHqMsdd0ndVC0KMv",
+      "serviceProvider": {
+        "accessKeyId": "<REDACTED>",
+        "secretAccessKey": "<REDACTED>",
+        "sessionToken": "<REDACTED>"
+      },
+      "instanceParameters": null
+    },
+    "userName": "bbqchip",
+    "subscription": null,
+    "userEmail": "mahaw001@csusm.edu",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "590183727218",
+    "versionSf": "4.1.21",
+    "serviceProviderAwsCfStackName": "skip-dev",
+    "integrations": {},
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-west-2:590183727218:stack/skip-dev/72dcb6d0-5939-11ef-867b-0a952cca2f6d",
+    "serviceProviderAwsCfStackCreated": "2024-08-13T06:01:14.889Z",
+    "serviceProviderAwsCfStackUpdated": "2024-08-13T06:01:57.007Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "ApiLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-west-2:590183727218:function:skip-dev-api:11",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-skip-dev-ApiLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "HttpApiId",
+        "OutputValue": "bd10exxgyf",
+        "Description": "Id of the HTTP API",
+        "ExportName": "sls-skip-dev-HttpApiId"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "skip-dev-serverlessdeploymentbucket-xyumqe9ohklg",
+        "ExportName": "sls-skip-dev-ServerlessDeploymentBucketName"
+      },
+      {
+        "OutputKey": "HttpApiUrl",
+        "OutputValue": "https://bd10exxgyf.execute-api.us-west-2.amazonaws.com",
+        "Description": "URL of the HTTP API",
+        "ExportName": "sls-skip-dev-HttpApiUrl"
+      }
+    ]
+  }
+}

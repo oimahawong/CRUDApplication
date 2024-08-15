@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "serverless-finch": "^4.0.4"
+  },
+  "devDependencies": {
+    "serverless-wsgi": "^3.0.4"
+  }
+}
